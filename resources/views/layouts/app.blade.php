@@ -15,9 +15,48 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <!-- Styles -->
+    <style>
+        html, body {
+            background-color: #fff;
+            color: #636b6f;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 200;
+            height: 100vh;
+            margin: 0;
+        }
+        .full-height {
+            height: 100vh;
+        }
+        .flex-center {
+            align-items: center;
+            
+            justify-content: center;
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+        .position-ref {
+            position: relative;
+        }
+        .content {
+            text-align: center;
+        }
+        .title {
+            font-size: 84px;
+        }
+        .m-b-md {
+            margin-bottom: 30px;
+        }
+        .hidden{
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
