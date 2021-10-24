@@ -114,12 +114,11 @@
                 </div>
             </div>
 
-
         </div>
-
+        <!-- end of app placeholder-->
         
 
-
+        <!-- include app.js here -->
         <script type="text/javascript" src="/js/app.js"></script>
     </body>
 
