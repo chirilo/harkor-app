@@ -319,7 +319,7 @@
                 
                 <div class="topbar stick">
                     <div class="logo">
-                        <a title="" href="newsfeed.html" style="margin-bottom: 25px;"><img src="https://picsum.photos/95/34" alt=""></a>
+                        <a href="#">Harkor App</a>
                     </div>
                     
                     <div class="top-area">
