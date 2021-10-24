@@ -16,8 +16,8 @@ use App\Http\Controllers\PostsController; // blogpost
 */
 
 Route::get('/', function () {
-    //return view('welcome');
-    return view('posts/postsfeed'); // this will serve as the landing page
+    return view('welcome');
+    //return view('posts/postsfeed'); // this will serve as the landing page
 });
 
 Auth::routes();
