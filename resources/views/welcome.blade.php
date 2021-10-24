@@ -60,71 +60,70 @@
         
         <!-- app placeholder -->
         <div id="app">
-            
-            <!-- add post here -->
-            <div class="title m-b-md">
-                Post
-            </div>
-            <div class="alert alert-danger" role="alert" v-bind:class="{hidden: hasError}">
-                All fields are required!
-            </div>
-            <div class="form-group">
-                <label for="make">Title</label>
-                <input type="text" class="form-control" id="title" required placeholder="Title" name="title" v-model="newPost.title">
-            </div>
-                                                    
-            <div class="form-group">
-                <label for="model">Description</label>
-                <input type="text" class="form-control" id="description" required placeholder="Description" name="description" v-model="newPost.description">
-            </div>
+            <!-- basic html for CRUD -->
+            <div style="display: none;"> 
+                <!-- add post here -->
+                <div class="title m-b-md">
+                    Post
+                </div>
+                <div class="alert alert-danger" role="alert" v-bind:class="{hidden: hasError}">
+                    All fields are required!
+                </div>
+                <div class="form-group">
+                    <label for="make">Title</label>
+                    <input type="text" class="form-control" id="title" required placeholder="Title" name="title" v-model="newPost.title">
+                </div>
+                                                        
+                <div class="form-group">
+                    <label for="model">Description</label>
+                    <input type="text" class="form-control" id="description" required placeholder="Description" name="description" v-model="newPost.description">
+                </div>
 
-            <button class="btn btn-primary" @click.prevent="createPost()">
-                Add Post
-            </button>
+                <button class="btn btn-primary" @click.prevent="createPost()">
+                    Add Post
+                </button>
 
 
-            <!-- display posts -->
-            <table class="table table-striped" id="table">
-                <thead>
-                    <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Title</th>
-                    <th scope="col">Description</th>
-                    <th scope="col">Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr v-for ="post in posts">
-                    <th scope="row">@{{post.id}}</th>
-                    <td>@{{post.title}}</td>
-                    <td>@{{post.description}}</td>
+                <!-- display posts -->
+                <table class="table table-striped" id="table">
+                    <thead>
+                        <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for ="post in posts">
+                        <th scope="row">@{{post.id}}</th>
+                        <td>@{{post.title}}</td>
+                        <td>@{{post.description}}</td>
 
-                    <td @click="setVal(post.id, post.title, post.description)"  class="btn btn-info" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil"></i>
-                    </td>
-                    <td  @click.prevent="deletePost(post)" class="btn btn-danger"> 
-                    <i class="fa fa-trash"></i>
-                    </td>
-                    </tr>
-                </tbody>
-            </table>
+                        <td @click="setVal(post.id, post.title, post.description)"  class="btn btn-info" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil"></i>
+                        </td>
+                        <td  @click.prevent="deletePost(post)" class="btn btn-danger"> 
+                        <i class="fa fa-trash"></i>
+                        </td>
+                        </tr>
+                    </tbody>
+                </table>
 
-            <!-- Modal -->
-            <div id="myModal" class="modal fade" role="dialog">
-                <div class="modal-body">
-                    <input type="hidden" disabled class="form-control" id="e_id" name="id" required :value="this.e_id">
-                        Title: <input type="text" class="form-control" id="e_title" name="title" required :value="this.e_title">
-                        Description: <input type="text" class="form-control" id="e_description" name="description" required  :value="this.e_description">
-                </div>    
-                                        
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" @click="editPost()">Save changes</button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <!-- Modal -->
+                <div id="myModal" class="modal fade" role="dialog">
+                    <div class="modal-body">
+                        <input type="hidden" disabled class="form-control" id="e_id" name="id" required :value="this.e_id">
+                            Title: <input type="text" class="form-control" id="e_title" name="title" required :value="this.e_title">
+                            Description: <input type="text" class="form-control" id="e_description" name="description" required  :value="this.e_description">
+                    </div>    
+                                            
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" @click="editPost()">Save changes</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
                 </div>
             </div>
-
-        
-
-
+            
             <!-- Winku Theme -->
             <!--<div class="se-pre-con"></div>-->
             <div class="theme-layout">
@@ -320,7 +319,7 @@
                 
                 <div class="topbar stick">
                     <div class="logo">
-                        <a title="" href="newsfeed.html"><img src="https://picsum.photos/1332/431" alt=""></a>
+                        <a title="" href="newsfeed.html" style="margin-bottom: 25px;"><img src="https://picsum.photos/95/34" alt=""></a>
                     </div>
                     
                     <div class="top-area">
@@ -399,7 +398,7 @@
                                     <ul class="drops-menu">
                                         <li>
                                             <a href="notifications.html" title="">
-                                                <img src="https://picsum.photos/1332/431" alt="">
+                                                <img src="https://picsum.photos/40/40" alt="">
                                                 <div class="mesg-meta">
                                                     <h6>sarah Loren</h6>
                                                     <span>Hi, how r u dear ...?</span>
@@ -410,7 +409,7 @@
                                         </li>
                                         <li>
                                             <a href="notifications.html" title="">
-                                                <img src="https://picsum.photos/1332/431/thumb-2.jpg" alt="">
+                                                <img src="https://picsum.photos/40/40" alt="">
                                                 <div class="mesg-meta">
                                                     <h6>Jhon doe</h6>
                                                     <span>Hi, how r u dear ...?</span>
@@ -421,7 +420,7 @@
                                         </li>
                                         <li>
                                             <a href="notifications.html" title="">
-                                                <img src="https://picsum.photos/1332/431" alt="">
+                                                <img src="https://picsum.photos/40/40" alt="">
                                                 <div class="mesg-meta">
                                                     <h6>Andrew</h6>
                                                     <span>Hi, how r u dear ...?</span>
@@ -432,7 +431,7 @@
                                         </li>
                                         <li>
                                             <a href="notifications.html" title="">
-                                                <img src="https://picsum.photos/1332/431" alt="">
+                                                <img src="https://picsum.photos/40/40" alt="">
                                                 <div class="mesg-meta">
                                                     <h6>Tom cruse</h6>
                                                     <span>Hi, how r u dear ...?</span>
@@ -443,7 +442,7 @@
                                         </li>
                                         <li>
                                             <a href="notifications.html" title="">
-                                                <img src="https://picsum.photos/1332/431" alt="">
+                                                <img src="https://picsum.photos/40/40" alt="">
                                                 <div class="mesg-meta">
                                                     <h6>Amy</h6>
                                                     <span>Hi, how r u dear ...?</span>
@@ -463,7 +462,7 @@
                                     <ul class="drops-menu">
                                         <li>
                                             <a href="notifications.html" title="">
-                                                <img src="https://picsum.photos/1332/431" alt="">
+                                                <img src="https://picsum.photos/40/40" alt="">
                                                 <div class="mesg-meta">
                                                     <h6>sarah Loren</h6>
                                                     <span>Hi, how r u dear ...?</span>
@@ -474,7 +473,7 @@
                                         </li>
                                         <li>
                                             <a href="notifications.html" title="">
-                                                <img src="https://picsum.photos/1332/431" alt="">
+                                                <img src="https://picsum.photos/40/40" alt="">
                                                 <div class="mesg-meta">
                                                     <h6>Jhon doe</h6>
                                                     <span>Hi, how r u dear ...?</span>
@@ -485,7 +484,7 @@
                                         </li>
                                         <li>
                                             <a href="notifications.html" title="">
-                                                <img src="https://picsum.photos/1332/431" alt="">
+                                                <img src="https://picsum.photos/40/40" alt="">
                                                 <div class="mesg-meta">
                                                     <h6>Andrew</h6>
                                                     <span>Hi, how r u dear ...?</span>
@@ -496,7 +495,7 @@
                                         </li>
                                         <li>
                                             <a href="notifications.html" title="">
-                                                <img src="https://picsum.photos/1332/431" alt="">
+                                                <img src="https://picsum.photos/40/40" alt="">
                                                 <div class="mesg-meta">
                                                     <h6>Tom cruse</h6>
                                                     <span>Hi, how r u dear ...?</span>
@@ -507,7 +506,7 @@
                                         </li>
                                         <li>
                                             <a href="notifications.html" title="">
-                                                <img src="https://picsum.photos/1332/431" alt="">
+                                                <img src="https://picsum.photos/40/40" alt="">
                                                 <div class="mesg-meta">
                                                     <h6>Amy</h6>
                                                     <span>Hi, how r u dear ...?</span>
@@ -530,7 +529,7 @@
                             </li>
                         </ul>
                         <div class="user-img">
-                            <img src="https://picsum.photos/1332/431" alt="">
+                            <img src="https://picsum.photos/45/45" alt="">
                             <span class="status f-online"></span>
                             <div class="user-setting">
                                 <a href="#" title=""><span class="status f-online"></span>online</a>
@@ -544,6 +543,7 @@
                             </div>
                         </div>
                         <span class="ti-menu main-menu" data-ripple=""></span>
+                        <span class="ti-menu main-menu" data-ripple="" style="content: "\e68e";><span class="ripple"><span class="ink" style="height: 20px; width: 20px; background-color: rgb(217, 217, 217); top: -1px; left: 3.04688px;"></span></span></span>
                     </div>
                 </div><!-- topbar -->   
                     
@@ -566,7 +566,7 @@
                                 <div class="col-lg-2 col-sm-3">
                                     <div class="user-avatar">
                                         <figure>
-                                            <img src="https://picsum.photos/1332/431" alt="">
+                                            <img src="https://picsum.photos/131/131" alt="">
                                             <form class="edit-phto">
                                                 <i class="fa fa-camera-retro"></i>
                                                 <label class="fileContainer">
@@ -581,8 +581,8 @@
                                     <div class="timeline-info">
                                         <ul>
                                             <li class="admin-name">
-                                              <h5>Janice Griffith</h5>
-                                              <span>Group Admin</span>
+                                              <h5>Chi Rilo</h5>
+                                              <span>Founder/CEO/COO</span>
                                             </li>
                                             <li>
                                                 <a class="active" href="time-line.html" title="" data-ripple="">time line</a>
@@ -701,35 +701,35 @@
                                                     <h4 class="widget-title">Who's follownig</h4>
                                                     <ul class="followers">
                                                         <li>
-                                                            <figure><img src="https://picsum.photos/1332/431" alt=""></figure>
+                                                            <figure><img src="https://picsum.photos/45/45" alt=""></figure>
                                                             <div class="friend-meta">
                                                                 <h4><a href="time-line.html" title="">Kelly Bill</a></h4>
                                                                 <a href="#" title="" class="underline">Add Friend</a>
                                                             </div>
                                                         </li>
                                                         <li>
-                                                            <figure><img src="https://picsum.photos/1332/431" alt=""></figure>
+                                                            <figure><img src="https://picsum.photos/45/45" alt=""></figure>
                                                             <div class="friend-meta">
                                                                 <h4><a href="time-line.html" title="">Issabel</a></h4>
                                                                 <a href="#" title="" class="underline">Add Friend</a>
                                                             </div>
                                                         </li>
                                                         <li>
-                                                            <figure><img src="https://picsum.photos/1332/431" alt=""></figure>
+                                                            <figure><img src="https://picsum.photos/45/45" alt=""></figure>
                                                             <div class="friend-meta">
                                                                 <h4><a href="time-line.html" title="">Andrew</a></h4>
                                                                 <a href="#" title="" class="underline">Add Friend</a>
                                                             </div>
                                                         </li>
                                                         <li>
-                                                            <figure><img src="https://picsum.photos/1332/431" alt=""></figure>
+                                                            <figure><img src="https://picsum.photos/45/45" alt=""></figure>
                                                             <div class="friend-meta">
                                                                 <h4><a href="time-line.html" title="">Sophia</a></h4>
                                                                 <a href="#" title="" class="underline">Add Friend</a>
                                                             </div>
                                                         </li>
                                                         <li>
-                                                            <figure><img src="https://picsum.photos/1332/431" alt=""></figure>
+                                                            <figure><img src="https://picsum.photos/45/45" alt=""></figure>
                                                             <div class="friend-meta">
                                                                 <h4><a href="time-line.html" title="">Allen</a></h4>
                                                                 <a href="#" title="" class="underline">Add Friend</a>
@@ -744,21 +744,18 @@
                                                 <div class="central-meta new-pst item">
                                                     <div class="new-postbox">
                                                         <figure>
-                                                            <img src="https://picsum.photos/1332/431" alt="">
+                                                            <img src="https://picsum.photos/52/52" alt="">
                                                         </figure>
                                                         <div class="newpst-input">
                                                             <form method="post">
-                                                                <textarea rows="2" placeholder="write something"></textarea>
+                                                                <!-- <textarea rows="2" placeholder="write something"></textarea> -->
+                                                                <!-- <input type="text" class="form-control" id="description" required placeholder="Description" name="description" v-model="newPost.description"> -->
+                                                                <textarea rows="2" placeholder="write Description" id="description" required v-model="newPost.description"></textarea>
+                                                                <input type="text" class="form-control" id="title" required placeholder="Title" name="title" v-model="newPost.title">
                                                                 <div class="attachments">
                                                                     <ul>
-                                                                        <li>
+                                                                        <!-- <li>
                                                                             <i class="fa fa-music"></i>
-                                                                            <label class="fileContainer">
-                                                                                <input type="file">
-                                                                            </label>
-                                                                        </li>
-                                                                        <li>
-                                                                            <i class="fa fa-image"></i>
                                                                             <label class="fileContainer">
                                                                                 <input type="file">
                                                                             </label>
@@ -774,9 +771,15 @@
                                                                             <label class="fileContainer">
                                                                                 <input type="file">
                                                                             </label>
+                                                                        </li> -->
+                                                                        <li>
+                                                                            <i class="fa fa-image"></i>
+                                                                            <label class="fileContainer">
+                                                                                <input type="file"> <!-- add vue component here to upload pic -->
+                                                                            </label>
                                                                         </li>
                                                                         <li>
-                                                                            <button type="submit">Publish</button>
+                                                                            <button type="submit" @click.prevent="createPost()">Publish</button>
                                                                         </li>
                                                                     </ul>
                                                                 </div>
@@ -790,14 +793,14 @@
                                                     <div class="user-post">
                                                         <div class="friend-info">
                                                             <figure>
-                                                                <img src="https://picsum.photos/1332/431" alt="">
+                                                                <img src="https://picsum.photos/35/35" alt="">
                                                             </figure>
                                                             <div class="friend-name">
                                                                 <ins><a href="time-line.html" title="">Chi Rilo</a></ins>
                                                                 <span>@{{post.created_at}}</span>
                                                             </div>
                                                             <div class="post-meta">
-                                                                <img src="https://picsum.photos/1332/431" alt="">
+                                                                <img src="https://picsum.photos/503/272" alt="">
                                                                 <div class="we-video-info">
                                                                     <ul>
                                                                         
@@ -962,7 +965,7 @@
                                                 </div>
                                                 <!-- -->
 
-                                                <div class="central-meta item">
+                                                <div class="central-meta item" style="display: none;">
                                                     <div class="user-post">
                                                         <div class="friend-info">
                                                             <figure>
@@ -1053,7 +1056,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="central-meta item">
+                                                <div class="central-meta item" style="display: none;">
                                                     <div class="user-post">
                                                         <div class="friend-info">
                                                             <figure>
@@ -1228,7 +1231,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="central-meta item">
+                                                <div class="central-meta item" style="display: none;">
                                                     <div class="user-post">
                                                         <div class="friend-info">
                                                             <figure>
@@ -1575,7 +1578,7 @@
                                 <div class="widget">
                                     <div class="foot-logo">
                                         <div class="logo">
-                                            <a href="index.html" title=""><img src="https://picsum.photos/1332/431" alt=""></a>
+                                            <a href="index.html" title=""><img src="https://picsum.photos/95/34" alt=""></a>
                                         </div>  
                                         <p>
                                             The trio took this simple idea and built it into the world’s leading carpooling platform.
@@ -1646,8 +1649,8 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
-                                <span class="copyright">© Winku 2018. All rights reserved.</span>
-                                <i><img src="https://picsum.photos/1332/431" alt=""></i>
+                                <span class="copyright">© Harkor App 2021. All rights reserved.</span>
+                                <i><img src="https://picsum.photos/5/5" alt=""></i>
                             </div>
                         </div>
                     </div>
